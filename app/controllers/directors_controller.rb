@@ -8,6 +8,11 @@ class DirectorsController < ApplicationController
     render({ :template => "director_templates/youngest" })
   end
 
+  def senior
+    @oldest_director = Director.eldest
+    render({ :template => "director_templates/oldest" })
+  end
+
   def show
     the_id = params.fetch("the_id")
 

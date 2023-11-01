@@ -17,7 +17,7 @@ class Director < ApplicationRecord
     Director.where.not(dob: nil).order(dob: :desc).first
   end
 
-  def self.oldest
+  def self.eldest
     Director.where.not(dob: nil).order(dob: :asc).first
   end
 end
